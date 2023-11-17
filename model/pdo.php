@@ -2,7 +2,7 @@
 <?php
 // kết nối cơ sở dữ liệu
 function get_connection(){
-    $dburl = "mysql:host=localhost;dbname=dam;charset=utf8";
+    $dburl = "mysql:host=localhost;dbname=shopgumdam;charset=utf8";
     $username = 'root';
     $password = '';
     $conn = new PDO($dburl, $username, $password);
