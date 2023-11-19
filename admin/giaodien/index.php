@@ -18,9 +18,9 @@ if (isset($_GET['act'])){
             include "../category/list.php";
             break;
         case 'delete_dm':
-//            if (){
-//
-//            }
+            if (isset($_GET['id_dm']) && ($_GET['id_dm'])>0){
+                del_cat($_GET['id_dm']);
+             }
             include "../category/list.php";
             break;
         case 'update_dm':

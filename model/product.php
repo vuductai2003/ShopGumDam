@@ -1,6 +1,7 @@
 <?php
 function ins_product($name, $price, $image, $desc, $id_cat){
-    $sql = "INSERT INTO sanpham(name, price, image, mota, iddm) VALUES ('$name','$price','$image','$desc','$id_cat')";
+    $sql = "INSERT INTO sanpham(name, price, image, mota, iddm) 
+    VALUES ('$name','$price','$image','$desc','$id_cat')";
     pdo_execute($sql);
 }
 

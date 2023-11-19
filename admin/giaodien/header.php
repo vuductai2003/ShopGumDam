@@ -44,13 +44,13 @@
                     <a class="nav-link" href="index.php?act=list_dm">
                         Quản lý danh mục
                     </a>
-                    <a class="nav-link collapsed" href="index.php?act=add_sp" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                    <a class="nav-link collapsed" href="index.php?act=add_sp">
                         Quản lý sản phẩm
                     </a>
-                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                    <a class="nav-link collapsed" href="#" >
                         Quản lý tài khoản
                     </a>
-                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                    <a class="nav-link collapsed" href="#" >
                         Quản lý đơn hàng
                     </a>
                 </div>
