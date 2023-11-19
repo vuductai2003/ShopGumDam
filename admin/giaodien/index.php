@@ -6,6 +6,7 @@ include "header.php";
 if (isset($_GET['act'])){
     $act = $_GET['act'];
     switch ($act){
+/*danh mục*/
         case 'add_dm':
             if (isset($_POST['add_dm']) && ($_POST['add_dm'])){
                 $name = $_POST['name'];
@@ -17,18 +18,20 @@ if (isset($_GET['act'])){
             include "../category/list.php";
             break;
         case 'delete_dm':
-            if (isset($_GET['id_dm']) && ($_GET['id_dm'])>0){
-                del_cat($_GET['id_dm']);
-             }
+//            if (){
+//
+//            }
             include "../category/list.php";
             break;
         case 'update_dm':
-            if (isset($_POST['update_dm']) && isset($_GET['id_dm'])>0){
+            if (isset($_POST['update_dm'])){
                 $name = $_POST['name'];
                 update_cat($name);
             }
             include "../category/update.php";
             break;
+ /*end danh mục*/
+ /*sản phẩm*/
         case 'add_sp':
             if (isset($_POST['add_sp']) && $_POST['add_sp']){
                 $name = $_POST['name'];

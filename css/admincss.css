@@ -1,4 +1,4 @@
-.formcat{
+.formcat .formdm{
     border: 1px solid black;
     border-radius: 5px;
     background-color: rgba(255, 255, 255, 0.27);
@@ -11,4 +11,7 @@ form{
 .cart{
     margin: 20px 0;
     border: 1px solid black;
+}
+.formpro{
+    margin: 10px 0 0 387px;
 }
