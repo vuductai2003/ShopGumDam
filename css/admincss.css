@@ -5,6 +5,15 @@
     margin: 10px 0 0 387px;
     width: 381px;
 }
+input#email {
+    width: 300px;
+}
+.formuser {
+    border: 1px solid black;
+    width: 500px;
+    border-radius: 5px;
+    margin: 50px 0 0 372px;
+}
 form{
     margin: 20px 20px;
 }

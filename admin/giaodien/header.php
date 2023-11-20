@@ -44,10 +44,10 @@
                     <a class="nav-link" href="index.php?act=list_dm">
                         Quản lý danh mục
                     </a>
-                    <a class="nav-link collapsed" href="index.php?act=add_sp">
+                    <a class="nav-link collapsed" href="index.php?act=list_sp">
                         Quản lý sản phẩm
                     </a>
-                    <a class="nav-link collapsed" href="#" >
+                    <a class="nav-link collapsed" href="?act=list_user" >
                         Quản lý tài khoản
                     </a>
                     <a class="nav-link collapsed" href="#" >

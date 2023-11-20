@@ -18,13 +18,13 @@
                     $listdm = show_cat();
                     foreach ($listdm as $list){
                         extract($list);
-                        $act = "index.php?act=delete_dm&id_dm=".$id;
-                        $act_dm = "index.php?act=update_dm&id_dm=".$id;
+                        $act = "index.php?act=delete_dm&id_dm=".$id_dm;
+                        $act_dm = "index.php?act=update_dm&id_dm=".$id_dm;
                         echo '
                             <tr>
-                                <td>'.$id.'</td>
-                                <td>'.$name.'</td>
-                                <td>
+                                <td>'.$id_dm.'</td>
+                                <td>'.$name_dm.'</td>
+                                <td>     
                                     <button><a href="'.$act_dm.'" style="text-decoration: none; color: black">Sửa</a></button>
                                     <button><a href="'.$act.'" style="text-decoration: none; color: black">Xóa</a></button>
                                 </td>
