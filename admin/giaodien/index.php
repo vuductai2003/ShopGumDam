@@ -7,6 +7,9 @@ include "header.php";
 if (isset($_GET['act'])){
     $act = $_GET['act'];
     switch ($act){
+        case 'thongke':
+            include "thongke.php";
+            break;
         case 'admin':
             include "../giaodien/admin.php";
             break;
@@ -120,7 +123,7 @@ if (isset($_GET['act'])){
             break;
     }
 }else{
-    include "../../admin/category/list.php";
+    include "../../admin/giaodien/thongke.php";
 }
 ?>
 

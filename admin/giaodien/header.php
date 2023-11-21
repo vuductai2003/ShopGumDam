@@ -41,7 +41,7 @@
             <div class="sb-sidenav-menu">
                 <div class="nav">
                     <div class="sb-sidenav-menu-heading"></div>
-                    <a class="nav-link" href="index.php?act=">
+                    <a class="nav-link" href="?act=thongke">
                         Trang chủ
                     </a>
                     <a class="nav-link" href="index.php?act=list_dm">
