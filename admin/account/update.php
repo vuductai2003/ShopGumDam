@@ -2,8 +2,8 @@
     <div class="formuser">
         <div class="container mt-3">
             <h2>Cập nhật tài khoản</h2>
-            <form action="?act=update_user&id_user=<?php echo $showone['id_user'];?>" method="post">
-                <input type="hidden" name="id_user" value="<?php echo $showone['id_user'];?>">
+            <form action="?act=update_user&id_user=<?php echo $showone['id'];?>" method="post">
+                <input type="hidden" name="id_user" value="<?php echo $showone['id'];?>">
                 <div class="mb-3 mt-3">
                     <label for="email">Tên khách hàng:</label>
                     <input type="text" class="form-control" id="email" placeholder="" name="name">

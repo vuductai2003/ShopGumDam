@@ -14,19 +14,19 @@
                             <label for="email">Giá:</label>
                             <input type="tel" class="form-control" id="email" placeholder="" name="price">
                         </div>
-                        <div class="select">
+
                             <label for="email">Danh mục:</label>
                             <select name="dm" >
                                 <option value="">Danh mục</option>
                                 <?php
-                                $getdm = show_product();
-                                foreach ($getdm as $dm){
+                                $get = show_cat();
+                                foreach ($get as $dm){
                                     extract($dm);
                                     echo '<option value="'.$id_dm.'">'.$name_dm.'</option>';
                                 }
                                 ?>
                             </select> <br>
-                        </div>
+
                         <div class="mb-3 mt-3">
                             <label for="email">Ảnh:</label>
                             <input type="file" class="form-control" id="email" placeholder="" name="img">

@@ -23,11 +23,11 @@
                     $listkh = show_user();
                     foreach ($listkh as $list){
                         extract($list);
-                        $del = "?act=delete_user&id_user=".$id_user;
-                        $upd = "?act=update_user&id_user=".$id_user;
+                        $del = "?act=delete_user&id_user=".$id;
+                        $upd = "?act=update_user&id_user=".$id;
                         echo '
                             <tr>
-                                <td>'.$id_user.'</td>
+                                <td>'.$id.'</td>
                                 <td>'.$user.'</td>
                                 <td>'.$pass.'</td>
                                 <td>'.$diachi.'</td>

@@ -21,7 +21,7 @@
                             <select name="dm" >
                                 <option value="">Danh mục</option>
                                 <?php
-                                $getdm = show_product();
+                                $getdm = show_cat();
                                 foreach ($getdm as $dm){
                                     extract($dm);
                                     echo '<option value="'.$id_dm.' " >'.$name_dm.'</option>';

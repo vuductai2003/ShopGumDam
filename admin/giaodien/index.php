@@ -15,6 +15,7 @@ if (isset($_GET['act'])){
             if (isset($_POST['add_dm']) && ($_POST['add_dm'])){
                 $name = $_POST['name'];
                 ins_cat($name);
+                header("location:?act=list_dm");
             }
             include "../category/add.php";
             break;
@@ -32,6 +33,7 @@ if (isset($_GET['act'])){
             if (isset($_POST['update_dm'])){
                 $id = $_POST['id_dm'];
                 update_cat($id, $_POST['name']);
+                header("location:?act=list_dm");
             }
             include "../category/update.php";
             break;
@@ -47,7 +49,7 @@ if (isset($_GET['act'])){
                 move_uploaded_file($_FILES['img']['tmp_name'], $target_file);
                 $desc = $_POST['desc'];
                 $cat = $_POST['dm'];
-                ins_product($name, $price,$img,$desc, $cat);
+                ins_product($name,$price,$img,$desc,$cat);
 
             }
 
@@ -69,6 +71,7 @@ if (isset($_GET['act'])){
                 $desc = $_POST['desc'];
                 $cat = intval($_POST['dm']);
                 update_product($name, $price,$img,$desc,$cat,$id );
+                header("location:?act=list_sp");
             }
             include "../product/update.php";
             break;

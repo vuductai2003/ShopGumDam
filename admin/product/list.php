@@ -1,6 +1,6 @@
 <div id="layoutSidenav_content">
     <div class="formshows">
-        <form action="?act=listsp" method="post">
+        <form action="?act=list_sp" method="post">
             <div class="container mt-3">
                 <button class="add">
                     <a href="?act=add_sp" style="text-decoration: none; color: black">Thêm sản phẩm</a>
