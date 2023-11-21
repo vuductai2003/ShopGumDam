@@ -92,6 +92,25 @@ if (isset($_GET['act'])){
         case 'list_user':
             include "../account/list.php";
             break;
+        case 'delete_user':
+            if (isset($_GET['id_user']) && ($_GET['id_user']) >0 ){
+                  del_user($_GET['id_user']);
+            }
+            include "../account/list.php";
+            break;
+        case 'update_user':
+            $showone = showone_user($_GET['id_user']);
+            if (isset($_POST['update_user'])){
+                $id_user = $_POST['id_user'];
+                $name = $_POST['name'];
+                $email = $_POST['email'];
+                $address = $_POST['address'];
+                $phone = $_POST['phone'];
+                $pass = $_POST['pass'];
+                upd_user($id_user,$name, $pass, $email, $address, $phone);
+            }
+            include "../account/update.php";
+            break;
         default:
             include "home.php";
             break;

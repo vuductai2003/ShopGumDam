@@ -23,17 +23,19 @@
                     $listkh = show_user();
                     foreach ($listkh as $list){
                         extract($list);
+                        $del = "?act=delete_user&id_user=".$id_user;
+                        $upd = "?act=update_user&id_user=".$id_user;
                         echo '
                             <tr>
-                                <td>'.$id.'</td>
+                                <td>'.$id_user.'</td>
                                 <td>'.$user.'</td>
                                 <td>'.$pass.'</td>
                                 <td>'.$diachi.'</td>
                                 <td>'.$email.'</td>
                                 <td>'.$phone.'</td>
                                 <td>     
-                                    <button><a href="" style="text-decoration: none; color: black">Sửa</a></button>
-                                    <button><a href="" style="text-decoration: none; color: black">Xóa</a></button>
+                                    <button><a href="'.$upd.'" style="text-decoration: none; color: black">Sửa</a></button>
+                                    <button><a href="'.$del.'" style="text-decoration: none; color: black">Xóa</a></button>
                                 </td>
                             </tr>
                         ';

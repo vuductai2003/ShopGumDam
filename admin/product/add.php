@@ -38,7 +38,7 @@
                             </div>
                         </div>
                         <button class="btn btn-primary"><a href="?act=list_sp" style="text-decoration: none; color: white">Sản phẩm</a></button>
-                        <input type="submit" class="btn btn-primary" name="add_sp" value="Thêm sảm phẩm">
+                        <input type="submit" class="btn btn-primary" name="add_sp" value="Thêm sản phẩm">
                     </form>
                 </div>
             </div>

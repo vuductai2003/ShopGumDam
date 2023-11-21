@@ -11,16 +11,16 @@ function ins_product($name, $price,$img, $desc, $id_cat){
     pdo_execute($sql);
 }
 
-function del_product($id){
-    $sql = "DELETE FROM sanpham WHERE id_sp=".$id_sp;
+function del_product($id_sp){
+    $sql = "DELETE FROM sanpham WHERE id_sp =".$id_sp;
     pdo_execute($sql);
 }
 
 function update_product($name, $price, $image, $desc, $id_cat, $id){
     if ($image!=""){
-        $sql ="UPDATE sanpham SET iddm='".$id_cat."', name='".$name."', price='".$price."', image='".$image."', mota='".$desc."'  where id_sp=".$id;
+        $sql ="UPDATE sanpham SET iddm='".$id_cat."', name='".$name."', price='".$price."', image='".$image."', mota='".$desc."'  where id_sp= ".$id;
     } else{
-        $sql ="UPDATE sanpham SET iddm='".$id_cat."', name='".$name."', price='".$price."', mota='".$desc."'  where id_sp=".$id;
+        $sql ="UPDATE sanpham SET iddm='".$id_cat."', name='".$name."', price='".$price."', mota='".$desc."'  where id_sp= ".$id;
     }
     pdo_execute($sql);
 }
