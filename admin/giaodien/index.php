@@ -50,7 +50,7 @@ if (isset($_GET['act'])){
                 $desc = $_POST['desc'];
                 $cat = $_POST['dm'];
                 ins_product($name,$price,$img,$desc,$cat);
-
+                header("location:?act=list_sp");
             }
 
             include "../product/add.php";
@@ -89,6 +89,7 @@ if (isset($_GET['act'])){
                 $phone = $_POST['phone'];
                 $pass = $_POST['pass'];
                 ins_user($name,$pass,$email,$address,$phone);
+                header("location:?act=list_user");
             }
             include "../account/add.php";
             break;

@@ -4,6 +4,11 @@ function show_product(){
     $list_pro = pdo_query($sql);
     return $list_pro;
 }
+function show_productt(){
+    $sql = "SELECT * FROM sanpham ";
+    $list_pro = pdo_query($sql);
+    return $list_pro;
+}
 
 function ins_product($name, $price,$img, $desc, $id_cat){
     $sql = "INSERT INTO sanpham(name, price,image, mota, iddm) 
