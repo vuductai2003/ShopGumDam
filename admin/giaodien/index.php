@@ -38,7 +38,6 @@ if (isset($_GET['act'])){
  /*end danh mục*/
  /*sản phẩm*/
         case 'add_sp':
-            $getdm = show_cat();
             if (isset($_POST['add_sp']) && ($_POST['add_sp'])){
                 $name = $_POST['name'];
                 $price = $_POST['price'];
@@ -49,6 +48,7 @@ if (isset($_GET['act'])){
                 $desc = $_POST['desc'];
                 $cat = $_POST['dm'];
                 ins_product($name, $price,$img,$desc, $cat);
+
             }
 
             include "../product/add.php";
