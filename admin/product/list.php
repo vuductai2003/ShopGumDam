@@ -42,10 +42,10 @@
                                             <td>'.$mota.'</td>
                                             <td>
                                                 <button>
-                                                    <a href="'.$updsp.'"style="text-decoration: none; color: black">Sửa</a>
+                                                    <a href="'.$updsp.'"style="text-decoration: none; color: black"><i class="fas fa-edit"></i></a>
                                                 </button>
                                                 <button>
-                                                    <a href="'.$delsp.'" style="text-decoration: none; color: black">Xóa</a>
+                                                    <a href="'.$delsp.'" style="text-decoration: none; color: black"><i class="fas fa-trash"></i></a>
                                                 </button>
                                             </td>
                                          </tr>

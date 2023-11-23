@@ -25,8 +25,8 @@
                                 <td>'.$id_dm.'</td>
                                 <td>'.$name_dm.'</td>
                                 <td>     
-                                    <button><a href="'.$act_dm.'" style="text-decoration: none; color: black">Sửa</a></button>
-                                    <button><a href="'.$act.'" style="text-decoration: none; color: black">Xóa</a></button>
+                                    <button><a href="'.$act_dm.'" style="text-decoration: none; color: black"><i class="fas fa-edit"></i>sửa</a></button>
+                                    <button><a href="'.$act.'" style="text-decoration: none; color: black"><i class="fas fa-trash"></i></a></button>
                                 </td>
                             </tr>
                         ';

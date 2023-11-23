@@ -11,7 +11,7 @@ if (isset($_GET['act'])){
             include "thongke.php";
             break;
         case 'admin':
-            include "../giaodien/admin.php";
+            include "../giaodien/login.php";
             break;
 /*danh mục*/
         case 'add_dm':
