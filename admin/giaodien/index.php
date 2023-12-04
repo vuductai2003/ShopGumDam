@@ -1,4 +1,5 @@
 <?php
+session_start();
 include "../../model/pdo.php";
 include "../../model/product.php";
 include "../../model/category.php";
@@ -7,18 +8,29 @@ include "header.php";
 if (isset($_GET['act'])){
     $act = $_GET['act'];
     switch ($act){
+        case 'login':
+            if(isset($_POST['dangnhap']) && $_POST['dangnhap'] ){
+                $user=$_POST['user'];
+                $pass=$_POST['pass'];
+                $checkuser=checkuser($user, $pass);
+                if(is_array($checkuser)){
+                    $_SESSION['user']=$checkuser;
+                    header('Location:index.php');
+                }else{
+                    $thongbao="Tài khoản không tồn tại. Vui lòng kiểm tra lại ";
+                }
+
+            }
+            include "../giaodien/index.php";
+            break;
         case 'thongke':
             include "thongke.php";
-            break;
-        case 'admin':
-            include "../giaodien/login.php";
             break;
 /*danh mục*/
         case 'add_dm':
             if (isset($_POST['add_dm']) && ($_POST['add_dm'])){
                 $name = $_POST['name'];
                 ins_cat($name);
-                header("location:?act=list_dm");
             }
             include "../category/add.php";
             break;
@@ -114,7 +126,8 @@ if (isset($_GET['act'])){
                 $address = $_POST['address'];
                 $phone = $_POST['phone'];
                 $pass = $_POST['pass'];
-                upd_user($id_user,$name, $pass, $email, $address, $phone);
+                upd_user($name, $pass, $email, $address, $phone,$id_user);
+                header("Location:?act=list_user");
             }
             include "../account/update.php";
             break;

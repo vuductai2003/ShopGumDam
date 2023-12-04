@@ -66,8 +66,9 @@
                 </div>
             </div>
             <div class="sb-sidenav-footer">
-                <div class="small">Logged in as:</div>
-                Admin
+                <a class="nav-link" href="../../view/index.php">
+                    Quay lại
+                </a>
             </div>
         </nav>
     </div>

@@ -23,11 +23,11 @@
                     $listkh = show_user();
                     foreach ($listkh as $list){
                         extract($list);
-                        $del = "?act=delete_user&id_user=".$id;
-                        $upd = "?act=update_user&id_user=".$id;
+                        $del = "?act=delete_user&id_user=".$id_user;
+                        $upd = "?act=update_user&id_user=".$id_user;
                         echo '
                             <tr>
-                                <td>'.$id.'</td>
+                                <td>'.$id_user.'</td>
                                 <td>'.$user.'</td>
                                 <td>'.$pass.'</td>
                                 <td>'.$diachi.'</td>
@@ -48,3 +48,10 @@
     </form>
 
 </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<script src="../../javascript/scripts.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+<script src="../../assets/demo/chart-area-demo.js"></script>
+<script src="../../assets/demo/chart-bar-demo.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
+<script src="../../javascript/datatables-simple-demo.js"></script>

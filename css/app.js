@@ -3,10 +3,10 @@ const widthSlider = document.querySelector('.slider').clientWidth;
 
 var index = 1;
 changeImage =function(){
-    var imgs =["../img/images/banner1.webp","../img/images/banner2.jpg","../img/images/banner3.jpg","../img/images/banner4.JPG"];
+    var imgs =["../img/images/banner1.webp","../img/images/banner3.jpg"];
     document.getElementById('img').src=imgs[index];
     index ++;
-    if(index==4){
+    if(index==2){
         index=0;
     }
    
@@ -78,4 +78,24 @@ overlay.addEventListener('click', () => {
 
     
 
-    
+
+var giohang = new Array();
+
+function themvaogiohang(x) {
+    var boxsp = x.parentElement.children;
+    var hinh = boxsp[0].children[0].src;
+    var gia = boxsp[1].children[0].innerText;
+    var tensp = boxsp[2].innerText;
+    var soluong = boxsp[3].value;
+    var sp = new Array(hinh, gia, tensp, soluong);
+
+    giohang.push(sp);
+
+    console.log(giohang);
+    showcountsp();
+
+}
+
+function showcountsp() {
+    document.getElementById("countsp").innerHTML = giohang.length;
+}

@@ -1,0 +1,137 @@
+
+.mainPro{
+    margin-top: 30px;
+}
+.image{
+    width: 500px;
+    height: 500px;
+}
+.imgSp{
+    max-width: 400px;
+    max-height: 400px;
+    margin: 50px 0 0 50px;
+}
+.mainItem {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: white;
+    width: 1300px;
+    margin-left: 300px;
+    border-radius: 5px;
+
+}
+.name{
+    margin-top: 53px;
+}
+.input{
+    margin-top: 30px;
+}
+.btn_sp a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+.btn_sp{
+    background-color: #0d6efd;
+    border: none;
+    border-radius: 5px;
+    width: 235px;
+    height: 50px;
+}
+.table{
+    width: 300px;
+    margin-top: 15px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.44);
+    text-align: center;
+    margin-left: 103px;
+}
+.l{
+    list-style-type: none;
+    padding: 5px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.44);
+}
+.desc{
+    margin-top: 15px;
+    background-color: white;
+    width: 1300px;
+    margin-left: 300px;
+    border-radius: 5px;
+    }
+.desc p{
+    margin: 0 0 0 40px;
+    padding-bottom: 15px;
+}
+.td{
+    padding: 10px 0 0 20px;
+}
+.dc{
+    margin: 17px 0 20px 23px;
+    border: 1px solid rgba(0, 0, 0, 0.44);
+    width: 1254px;
+    text-align: center;
+}
+.comment{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background-color: white;
+    width: 1300px;
+    margin-left: 300px;
+    border-radius: 5px;
+}
+.comment .bl{
+    padding: 15px 0 0 20px;
+}
+.user{
+    margin-left: 40px;
+    width: 700px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.02);
+}
+.user form{
+    padding: 10px 0 10px 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+.userBl{
+    margin-left: 30px;
+}
+.formBl{
+    padding: 0 0 20px 20px;
+}
+
+.productAlike{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background-color: white;
+    width: 1300px;
+    margin-left: 300px;
+    border-radius: 5px;
+}
+.product{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 30px;
+    padding: 30px 0 30px 0;
+}
+.productAlike .proItem{
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+
+}
+.productAlike .proItem img{
+    margin:30px 0 15px 32px ;
+
+}
+.productAlike .proItem img:hover{
+    transform: scale(1.1);
+}
+.productAlike .bl{
+    padding: 15px 0 0 20px;
+}
+.productAlike .proItem a{
+    color: black;
+}
+.productAlike .proItem a:hover{
+    color: #0c63e4;
+}

@@ -5,7 +5,7 @@ function show_product(){
     return $list_pro;
 }
 function show_productt(){
-    $sql = "SELECT * FROM sanpham ";
+    $sql = "SELECT * FROM sanpham LIMIT 12";
     $list_pro = pdo_query($sql);
     return $list_pro;
 }
@@ -47,4 +47,21 @@ function show_product_cungloai($id, $id_cat){
     $sql="select * from sanpham where iddm=$id_cat & id_sp <> $id";
     $list_product = pdo_query($sql);
     return  $list_product;
+}
+
+function getPro($id_dm){
+    $sql = "SELECT * FROM sanpham join danhmuc on sanpham.iddm = danhmuc.id_dm where iddm = $id_dm";
+    $list = pdo_query($sql);
+    return $list;
+}
+function getdm($id_dm){
+    $sql = "SELECT name_dm FROM danhmuc WHERE id_dm = $id_dm";
+    $list = pdo_query($sql);
+    return $list;
+}
+
+function show_producttt(){
+    $sql = "SELECT * FROM sanpham LIMIT 4";
+    $list_pr = pdo_query($sql);
+    return $list_pr;
 }

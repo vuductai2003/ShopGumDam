@@ -2,8 +2,8 @@
     <div class="formuser">
         <div class="container mt-3">
             <h2>Cập nhật tài khoản</h2>
-            <form action="?act=update_user&id_user=<?php echo $showone['id'];?>" method="post">
-                <input type="hidden" name="id_user" value="<?php echo $showone['id'];?>">
+            <form action="?act=update_user&id_user=<?php echo $showone['id_user'];?>" method="post">
+                <input type="hidden" name="id_user" value="<?php echo $showone['id_user'];?>">
                 <div class="mb-3 mt-3">
                     <label for="email">Tên khách hàng:</label>
                     <input type="text" class="form-control" id="email" placeholder="" name="name">
@@ -31,3 +31,10 @@
     </div>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<script src="../../javascript/scripts.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+<script src="../../assets/demo/chart-area-demo.js"></script>
+<script src="../../assets/demo/chart-bar-demo.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
+<script src="../../javascript/datatables-simple-demo.js"></script>
