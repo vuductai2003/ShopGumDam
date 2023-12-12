@@ -16,25 +16,25 @@
     <link rel="stylesheet" href="../css/style.css">
     <script defer src="../css/app.js"></script>
 </head>
-<body onload="loadImage()"  >
-<div id="root">
+<body>
     <header class="header">
         <div class="wrapper-header">
             <div class="logo">
                 <a href="index.php"><h6 class="logo-name"><img src="../img/images/logo1.png" width="50" height="50"></h6></a>
             </div>
             <nav class="navigate">
-                <a href="index.php" class="navigate-link">Trang chủ</a>
+                <a href="?act=trangchu" class="navigate-link">Trang chủ</a>
                 <a href="?act=tintuc" class="navigate-link">Giới thiệu  </a>
-                <a href="" class="navigate-link "> Liên hệ </a>
+<!--                <a href="" class="navigate-link "> Liên hệ </a>-->
                 <a href="?act=product" class="navigate-link"> Sản phẩm  </a>
             </nav>
-            <form class="d-flex" action="" method="post">
-                <input class="form-control me-2" type="search" placeholder="Từ khóa ... "  aria-label="Search" style="width: 326px;">
-                <a href=""><i class="fas fa-search fa-lg" style="color: white; margin-top: 11px;"></i></a>
+
+            <form class="d-flex" action="?act=trangchu" method="post">
+                <input class="form-control me-2" type="search"  aria-label="Search" style="width: 326px;" name="seach_name">
+                <button type="submit" style="background-color: black; border: none" name="seach"><i class="fas fa-search fa-lg" style="color: white;"></i></button>
             </form>
             <div class="icon-cart">
-                <a href=""><i class="fas fa-shopping-cart fa-lg" style="color: white"></i></a>
+<!--                <a href=""><i class="fas fa-shopping-cart fa-lg" style="color: white"></i></a>-->
                 <div class="space" style="margin: 0 20px"></div>
                 <?php 
                 if(isset($_SESSION['user'])){
@@ -48,7 +48,5 @@
                     <?php
                 }
                 ?>
-                
             </div>
-</div>
 </header>

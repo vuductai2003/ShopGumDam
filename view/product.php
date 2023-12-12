@@ -62,8 +62,8 @@
 <body>
  <main>
      <div class="product_main">
-        <?php 
-            $dm = getdm(12);
+     <?php 
+            $dm = getdm(11);
             foreach($dm as $d){
                 extract($d);
                 echo '<h2>'.$name_dm.'</h2>';
@@ -71,7 +71,7 @@
         ?>
          <div class="product">
              <?php
-             $sho = getPro(12);
+             $sho = getPro(11);
              foreach ($sho as $sp){
                  extract($sp);
                  $hinh =  $img_path.$image;
@@ -80,34 +80,6 @@
                     <div class="proItem">
                     <img src="'.$hinh.'" alt="" width="200px" height="200px">
                      <a href="'.$actsp.'" class="a">'.mb_substr($name,0,30,'UTF-8').'</a>
-                    <p>'.number_format($price).'đ</p>
-             </div>
-            ';
-             }
-             ?>
-         </div>
-     </div>
- </main>
- <main>
-     <div class="product_main">
-     <?php 
-            $dm = getdm(16);
-            foreach($dm as $d){
-                extract($d);
-                echo '<h2>'.$name_dm.'</h2>';
-            }
-        ?>
-         <div class="product">
-             <?php
-             $sho = getPro(16);
-             foreach ($sho as $sp){
-                 extract($sp);
-                 $hinh =  $img_path.$image;
-                 $actsp = "?act=sanphamchitiet&name_sp=".$name;
-                 echo '
-                    <div class="proItem">
-                    <img src="'.$hinh.'" alt="" width="200px" height="200px">
-                     <a href="" class="a">'.mb_substr($name,0,30,'UTF-8').'</a>
                     <p>'.number_format($price).'đ</p>
              </div>
             ';
@@ -131,11 +103,11 @@
              foreach ($sho as $sp){
                  extract($sp);
                  $hinh =  $img_path.$image;
-                 $actsp = "?act=sanphamchitiet&name_sp=".$name;
+                 $actsp = "?act=sanphamchitiet&id_sp=".$id_sp;
                  echo '
                     <div class="proItem">
                     <img src="'.$hinh.'" alt="" width="200px" height="200px">
-                     <a href="" class="a">'.mb_substr($name,0,30,'UTF-8').'</a>
+                     <a href="'.$actsp.'" class="a">'.mb_substr($name,0,30,'UTF-8').'</a>
                     <p>'.number_format($price).'đ</p>
              </div>
             ';
@@ -147,7 +119,7 @@
  <main>
      <div class="product_main">
          <?php
-         $dm = getdm(14);
+         $dm = getdm(12);
          foreach($dm as $d){
              extract($d);
              echo '<h2>'.$name_dm.'</h2>';
@@ -155,15 +127,15 @@
          ?>
          <div class="product">
              <?php
-             $sho = getPro(14);
+             $sho = getPro(12);
              foreach ($sho as $sp){
                  extract($sp);
                  $hinh =  $img_path.$image;
-                 $actsp = "?act=sanphamchitiet&name_sp=".$name;
+                 $actsp = "?act=sanphamchitiet&id_sp=".$id_sp;
                  echo '
                     <div class="proItem">
                     <img src="'.$hinh.'" alt="" width="200px" height="200px">
-                     <a href="" class="a">'.mb_substr($name,0,30,'UTF-8').'</a>
+                     <a href="'.$actsp.'" class="a">'.mb_substr($name,0,30,'UTF-8').'</a>
                     <p>'.number_format($price).'đ</p>
              </div>
             ';
@@ -172,33 +144,6 @@
          </div>
      </div>
  </main>
- <main>
-     <div class="product_main">
-         <?php
-         $dm = getdm(15);
-         foreach($dm as $d){
-             extract($d);
-             echo '<h2>'.$name_dm.'</h2>';
-         }
-         ?>
-         <div class="product">
-             <?php
-             $sho = getPro(15);
-             foreach ($sho as $sp){
-                 extract($sp);
-                 $hinh =  $img_path.$image;
-                 $actsp = "?act=sanphamchitiet&name_sp=".$name;
-                 echo '
-                    <div class="proItem">
-                    <img src="'.$hinh.'" alt="" width="200px" height="200px">
-                     <a href="" class="a">'.mb_substr($name,0,30,'UTF-8').'</a>
-                    <p>'.number_format($price).'đ</p>
-             </div>
-            ';
-             }
-             ?>
-         </div>
-     </div>
- </main>
+<div class="c" style="margin-bottom: 20px;"></div>
 </body>
 </html>

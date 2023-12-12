@@ -43,7 +43,7 @@
         <h3>Đăng nhập Admin</h3>
         <div class="mb-3 mt-3">
             <label for="email" class="form-label">Tên đăng nhập: </label>
-            <input type="email" class="form-control" id="email" placeholder="" name="email">
+            <input type="text" class="form-control" id="email" placeholder="" name="email">
         </div>
         <div class="mb-3">
             <label for="pwd" class="form-label">Mật khẩu: </label>
@@ -54,7 +54,17 @@
                 <input class="form-check-input" type="checkbox" name="remember"> Ghi nhớ tài khoản
             </label>
         </div>
-        <button type="submit" class="btn btn-primary"><a href="giaodien/index.php">Đăng nhập</a></button>
+        <label for="">
+            <p style="color: red">
+                <?php
+                if(isset($thongbao)&&($thongbao!="")){
+                    echo $thongbao;
+                }
+                ?>
+            </p>
+
+        </label> <br>
+        <button type="submit" class="btn btn-primary" ><a href="?act=index.php">Đăng nhập</a></button>
     </form>
 </div>
 </body>

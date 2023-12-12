@@ -9,15 +9,15 @@
         <form action="?act=update_user" method="post">
             <div class="mb-3 mt-3">
                 <label for="email">Tên đăng nhập:</label>
-                <input type="text" class="form-control" id="email" value="<?=$user?>" name="name">
+                <input type="text" class="form-control" id="email" required value="<?=$user?>" name="name">
             </div>
             <div class="mb-3 mt-3">
                 <label for="email">Email:</label>
-                <input type="email" class="form-control" id="email" value="<?=$email?>" name="email">
+                <input type="email" class="form-control" id="email" required value="<?=$email?>" name="email">
             </div>
             <div class="mb-3">
                 <label for="pwd">Mật khẩu:</label>
-                <input type="password" class="form-control" id="email" placeholder="" name="pass">
+                <input type="password" class="form-control" required id="email" placeholder="" name="pass">
             </div>
             <div class="mb-3">
                 <input type="hidden" name="id" value="<?=$id_user?>">

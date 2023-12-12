@@ -5,23 +5,23 @@
             <form action="?act=add_user" method="post">
                 <div class="mb-3 mt-3">
                     <label for="email">Tên khách hàng:</label>
-                    <input type="text" class="form-control" id="email" placeholder="" name="name">
+                    <input type="text" class="form-control" id="email" placeholder="" required name="name">
                 </div>
                 <div class="mb-3 mt-3">
                     <label for="email">Email:</label>
-                    <input type="email" class="form-control" id="email" placeholder="" name="email">
+                    <input type="email" class="form-control" id="email" required name="email">
                 </div>
                 <div class="mb-3 mt-3">
                     <label for="email">Địa chỉ:</label>
-                    <input type="text" class="form-control" id="email" placeholder="" name="address">
+                    <input type="text" class="form-control" id="email" required name="address">
                 </div>
                 <div class="mb-3 mt-3">
                     <label for="email">Số điện thoại:</label>
-                    <input type="tel" class="form-control" id="email" placeholder="" name="phone">
+                    <input type="tel" class="form-control" id="email" required name="phone">
                 </div>
                 <div class="mb-3">
                     <label for="pwd">Mật khẩu:</label>
-                    <input type="password" class="form-control" id="email" placeholder="" name="pass">
+                    <input type="password" class="form-control" id="email" required name="pass">
                 </div>
                 <button class="btn btn-primary"><a href="?act=list_user" style="text-decoration: none; color: white">Danh sách</a></button>
                 <input type="submit" class="btn btn-primary" name="add_user" value="Đăng kí">

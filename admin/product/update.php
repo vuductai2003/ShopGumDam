@@ -10,11 +10,11 @@
                         <input type="hidden" name="id_sp" value="<?php  echo $listonesp['id_sp'];?>">
                         <div class="mb-3 mt-3">
                             <label for="email">Tên sản phẩm:</label>
-                            <input type="text" class="form-control" id="email" placeholder="" name="name" value="">
+                            <input type="text" class="form-control" id="email" required name="name" value="">
                         </div>
                         <div class="mb-3 mt-3">
                             <label for="email">Giá:</label>
-                            <input type="tel" class="form-control" id="email" placeholder="" name="price" value="">
+                            <input type="tel" class="form-control" id="email" required name="price" value="">
                         </div>
                         <div class="select">
                             <label for="email">Danh mục:</label>
@@ -31,12 +31,12 @@
                         </div>
                         <div class="mb-3 mt-3">
                             <label for="email">Ảnh:</label>
-                            <input type="file" class="form-control" id="email" placeholder="" name="img" >
+                            <input type="file" class="form-control" id="email" required name="img" >
                         </div>
                         <div class="tex">
                             <div class="mb-3">
                                 <label for="pwd">Mô tả:</label>
-                                <textarea name="desc" cols="30" rows="10">"</textarea> <br><br>
+                                <textarea name="desc" cols="30" rows="10" required>"</textarea> <br><br>
                             </div>
                         </div>
                         <button class="btn btn-primary"><a href="?act=list_sp" style="text-decoration: none; color: white">Sản phẩm</a></button>

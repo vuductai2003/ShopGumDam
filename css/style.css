@@ -29,13 +29,6 @@ body {
     display: block;
     border: none;
 }
-/*.header{*/
-/*    position: fixed;*/
-/*    top: 0;*/
-/*    left: 0;*/
-/*    right: 0;*/
-/*    z-index: 1;*/
-/*}*/
 .logo .logo-name {
     font-size: 20px;
     font-weight: 200;
@@ -93,7 +86,6 @@ body {
 }
 .header{
     background-color: black;
-    
 }
 .navigate .navigate-link {
     text-decoration: none;
@@ -127,39 +119,6 @@ body {
 }
 .name-product-main a{
     text-decoration: none;
-}
-
-.slider {
-    margin: 0px auto;
-    position: relative;
-    height: 500px;
-    overflow: hidden;
-    user-select: none;
-}
-/*.sp{*/
-/*    margin-top: 162px;*/
-/*}*/
-.main-slider {
-    padding-top: 20px;
-    justify-content: center;
-    display: flex;
-    width: 100%;
-    height: 100%;
-    /*transition: transform 0.4s ease-in-out;*/
-
-}
-.item-slider {
-    width: 100%;
-    flex-grow: 1;
-    flex-shrink: 0;
-    flex-basis: 100%;
-}
-
-.main-slider img {
-    border-radius: 10px;
-    width: 90%;
-    height: 90%;
-    object-fit: cover;
 }
 
 .sale-flash {
@@ -463,11 +422,7 @@ small{
 
   input[type="number"] {
     width: 40px;
-    position: absolute;
-    margin-left: 70px;
-    bottom: 40px;
-    border-radius: 5px;
-    border: 1px #FC0 solid;
+      border: none;
 }
 
 input[type="submit"]{

@@ -32,7 +32,7 @@ extract($_SESSION['user']);
             <form action="?act=reset_mk" method="post">
                 <div class="form-group">
                     <label for="email">Nhập email: </label>
-                    <input type="email" class="form-control" id="email" name="email">
+                    <input type="email" class="form-control" id="email" required name="email">
                 </div>
                 <br>
                 <p>
@@ -55,7 +55,7 @@ extract($_SESSION['user']);
     .fo{
         width: 300px;
         border: 1px solid black;
-        margin:20px 0 20px 800px;
+        margin:20px 0 190px 800px;
         border-radius: 5px;
     }
     h2{

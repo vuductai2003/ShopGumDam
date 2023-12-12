@@ -2,14 +2,26 @@
 session_start();
 include "../../model/pdo.php";
 include "../../model/product.php";
+include "../../model/buy.php";
+include "../../model/thongke.php";
 include "../../model/category.php";
 include "../../model/user.php";
 include "header.php";
 if (isset($_GET['act'])){
     $act = $_GET['act'];
     switch ($act){
+        case 'deleteBuy':
+            if (isset($_GET['id_tt']) && ($_GET['id_tt'])>0){
+                $idDel = $_GET['id_tt'];
+                delBuy($idDel);
+            }
+            include "../buy/list.php";
+            break;
+        case 'listBuy':
+            include "../buy/list.php";
+            break;
         case 'login':
-            if(isset($_POST['dangnhap']) && $_POST['dangnhap'] ){
+            if(isset($_POST['logad']) && $_POST['logad'] ){
                 $user=$_POST['user'];
                 $pass=$_POST['pass'];
                 $checkuser=checkuser($user, $pass);
@@ -131,12 +143,12 @@ if (isset($_GET['act'])){
             }
             include "../account/update.php";
             break;
-        default:
-            include "home.php";
+        case "thongthe":
+            include "../giaodien/thongke.php";
             break;
     }
 }else{
-    include "../../admin/giaodien/thongke.php";
+    include "../giaodien/thongke.php";
 }
 ?>
 

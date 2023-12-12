@@ -4,15 +4,15 @@
         <form action="?act=dangky" method="post">
             <div class="mb-3 mt-3">
                 <label for="email">Tên đăng nhập:</label>
-                <input type="text" class="form-control" id="email" placeholder="" name="name">
+                <input type="text" class="form-control" id="email" required name="name">
             </div>
             <div class="mb-3 mt-3">
                 <label for="email">Email:</label>
-                <input type="email" class="form-control" id="email" placeholder="" name="email">
+                <input type="email" class="form-control" id="email" required name="email">
             </div>
             <div class="mb-3">
                 <label for="pwd">Mật khẩu:</label>
-                <input type="password" class="form-control" id="email" placeholder="" name="pass">
+                <input type="password" class="form-control" id="email" required name="pass">
             </div>
             <p>
                 <?php
@@ -31,7 +31,7 @@
     .fo{
         width: 500px;
         border: 1px solid black;
-        margin:20px 0 20px 700px;
+        margin:20px 0 58px 700px;
         border-radius: 5px;
     }
     h2{

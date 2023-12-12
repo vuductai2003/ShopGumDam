@@ -9,33 +9,48 @@
     <title>Document</title>
 </head>
 <body>
-<div class="mainPro">
-    <div class="mainItem">
-        <div class="image">
-            <?php
-            extract($onesp);
-            $hinh =  $img_path.$image;
-            ?>
-            <img class="imgSp" src="<?php echo $hinh?>" alt="">
-        </div>
-        <div class="name">
-
-            <h3><?php echo $onesp['name']?></h3>
-            <b style="font-size: 30px; color: red"><?php echo number_format($onesp['price']) ?>đ</b>
-            <div class="input">
-                <button class="btn_sp"><a href="">Thêm vào giỏ hàng</a></button>
-                <button class="btn_sp"><a href="">Mua ngay</a></button>
+<form action="" method="post">
+    <div class="mainPro">
+        <div class="mainItem">
+            <div class="image">
+                <?php
+                extract($onesp);
+                $hinh =  $img_path.$image;
+                $actt = "?act=thanhtoan&id_sp=$id_sp";
+                ?>
+                <img class="imgSp" src="<?php echo $hinh?>" alt="">
             </div>
-            <div class="table">
-                <li class="l"><b>Chỉ có tại Gundam Chất</b></li>
-                <li class="l">Sản phẩm an toàn</li>
-                <li class="l">Chất lượng cam kết</li>
-                <li class="l">Dịch vụ vượt trội</li>
-                <li class="l">Giao hàng nhanh chóng</li>
-            </div>
+            <div class="name">
+                <h3><?php echo $onesp['name']?></h3>
+                <b style="font-size: 30px; color: red"><?php echo number_format($onesp['price']) ?>đ</b>
+                <div class="input">
+                    <?php
+                    if (isset($_SESSION['user'])){
+                        extract($_SESSION['user']);
+                        ?>
+                        <button class="btn_sp" name="add_to_cart" type="submit"><a href="">Thêm vào giỏ hàng</a></button>
+                        <button class="btn_sp" name="addBill" type="submit"><a href="<?php echo $actt?>">Mua ngay</a></button>
+                    <?php
+                    } else{
+                        ?>
+                        <button class="btn_sp" name="add_to_cart" type="submit"><a href="">Thêm vào giỏ hàng</a></button>
+                        <button class="btn_sp" name="addBill" type="submit"><a href="?act=dangnhap">Mua ngay</a></button>
+                    <?php
+                    }
+                    ?>
 
+                </div>
+                <div class="table">
+                    <li class="l"><b>Chỉ có tại Gundam Chất</b></li>
+                    <li class="l">Sản phẩm an toàn</li>
+                    <li class="l">Chất lượng cam kết</li>
+                    <li class="l">Dịch vụ vượt trội</li>
+                    <li class="l">Giao hàng nhanh chóng</li>
+                </div>
+            </div>
         </div>
     </div>
+</form>
 
     <div class="desc">
         <div class="td">
@@ -72,12 +87,13 @@
         }
         ?>
 
-        <div class="dc"></div>
+
 
         <?php
         if (isset($_SESSION['user'])){
             extract($_SESSION['user']);
             ?>
+            <div class="dc"></div>
             <div class="formBl">
                 <div class="container mt-3">
                     <form action="" method="post">
@@ -99,7 +115,6 @@
                         <div class="mb-3 mt-3">
                             <label for="email"><b>Viết bình luận:</b></label>
                             <textarea class="form-control" rows="5" id="comment" name="bl" style="width: 700px; resize: none"></textarea>
-<!--                            <input type="text" class="form-control " id="email" placeholder="" name="bl" style="width: 700px;">-->
                         </div>
                         <button class="btn btn-primary" type="submit" name="add_comment">Bình luận</button>
                     </form>
@@ -114,17 +129,6 @@
         ?>
 
     </div>
-    <?php
-
-        if (isset($_POST['add_comment'])){
-            $header = $_REQUEST['id_sp'];
-            $id_user = $_POST['id_user'];
-            $commen = $_POST['bl'];
-            $idsp = $_POST['id_pro'];
-            insert_binhluan($commen, $id_user, $idsp);
-            exit();
-        }
-    ?>
     <div class="productAlike">
         <div class="bl">
             <h5><b>Sản phẩm khác</b></h5>
@@ -136,7 +140,7 @@
             foreach ($ss as $sp) {
                 extract($sp);
                 $hinh = $img_path . $image;
-                $actsp = "?act=sanphamchitiet&id_sp=" . $id_sp;
+                $actsp = "?act=sanphamchitiet&id_sp=" .$id_sp;
                 echo '
                     <div class="proItem">
                 <img src="'.$hinh.'" alt="" width="200px" height="200px">
@@ -148,7 +152,6 @@
             ?>
         </div>
     </div>
-</div>
 </body>
 </html>
 

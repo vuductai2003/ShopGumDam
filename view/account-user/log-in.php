@@ -1,3 +1,4 @@
+
 <?php
 if (isset($_SESSION['user'])){
     extract($_SESSION['user']);
@@ -10,6 +11,9 @@ if (isset($_SESSION['user'])){
                     </div>
                     <div class="form-group">
                         <label for="email">Email: <?= $email?></label>
+                    </div>
+                    <div class="form-group">
+                        <a href="?act=lichsu&id_user=<?= $id_user?>" style="color: black; text-decoration: none">Lịch sử mua hàng</a>
                     </div>
                     <?php
                     if ($role == 1){
@@ -43,18 +47,21 @@ if (isset($_SESSION['user'])){
                 <form action="?act=dangnhap" method="post">
                     <div class="form-group">
                         <label for="email">Tên đăng nhập: </label>
-                        <input type="text" class="form-control" id="email" name="user">
+                        <input type="text" class="form-control" id="email" required name="user">
                     </div>
                     <div class="form-group">
                         <label for="pwd">Mật khẩu:</label>
-                        <input type="password" class="form-control" id="pwd" name="pass">
+                        <input type="password" class="form-control" id="pwd" required name="pass">
                     </div>
                     <label for="">
-                        <?php
-                        if(isset($errol)&&($errol!="")){
-                            echo $errol;
-                        }
-                        ?>
+                        <p style="color: red">
+                            <?php
+                            if(isset($errol)&&($errol!="")){
+                                echo $errol;
+                            }
+                            ?>
+                        </p>
+
                     </label> <br>
                     <a href="?act=reset_mk">Quên mật khẩu?</a> <br>
                     <button type="submit" class="btn btn-primary" name="login">Đăng nhập</button>
@@ -70,7 +77,7 @@ if (isset($_SESSION['user'])){
     .fo{
         width: 400px;
         border: 1px solid black;
-        margin:20px 0 20px 800px;
+        margin:20px 0 120px 800px;
         border-radius: 5px;
     }
     h2{

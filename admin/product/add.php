@@ -7,11 +7,11 @@
                     <form action="index.php?act=add_sp" method="post" enctype="multipart/form-data">
                         <div class="mb-3 mt-3">
                             <label for="email">Tên sản phẩm:</label>
-                            <input type="text" class="form-control" id="email" placeholder="" name="name">
+                            <input type="text" class="form-control" id="email" required name="name">
                         </div>
                         <div class="mb-3 mt-3">
                             <label for="email">Giá:</label>
-                            <input type="tel" class="form-control" id="email" placeholder="" name="price">
+                            <input type="tel" class="form-control" id="email" required name="price">
                         </div>
 
                             <label for="email">Danh mục:</label>
@@ -28,12 +28,12 @@
 
                         <div class="mb-3 mt-3">
                             <label for="email">Ảnh:</label>
-                            <input type="file" class="form-control" id="email" placeholder="" name="img">
+                            <input type="file" class="form-control" id="email" required name="img">
                         </div>
                         <div class="tex">
                             <div class="mb-3">
                                 <label for="pwd">Mô tả:</label>
-                                <textarea name="desc" cols="50" rows="10" style="resize: none"></textarea> <br><br>
+                                <textarea name="desc" cols="50" rows="10" style="resize: none" required></textarea> <br><br>
                             </div>
                         </div>
                         <button class="btn btn-primary"><a href="?act=list_sp" style="text-decoration: none; color: white">Sản phẩm</a></button>

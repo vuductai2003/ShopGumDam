@@ -49,7 +49,7 @@
                 <div class="nav">
                     <div class="sb-sidenav-menu-heading"></div>
                     <a class="nav-link" href="?act=thongke">
-                        Trang chủ
+                        Thống kê
                     </a>
                     <a class="nav-link" href="index.php?act=list_dm">
                         Quản lý danh mục
@@ -60,7 +60,7 @@
                     <a class="nav-link collapsed" href="?act=list_user" >
                         Quản lý tài khoản
                     </a>
-                    <a class="nav-link collapsed" href="#" >
+                    <a class="nav-link collapsed" href="?act=listBuy" >
                         Quản lý đơn hàng
                     </a>
                 </div>

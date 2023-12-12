@@ -8,7 +8,7 @@
                 <input type="hidden" name="id_dm" value="<?php echo $listone['id_dm'];?>">
                 <div class="mb-3 mt-3">
                     <label for="email">Tên danh mục:</label>
-                    <input type="text" class="form-control " id="email" placeholder="" name="name" >
+                    <input type="text" class="form-control " id="email" required name="name" >
                 </div>
                 <button class="btn btn-primary"><a href="?act=list_dm" style="text-decoration: none; color: white">Danh mục</a></button>
                 <input type="submit" class="btn btn-primary" name="update_dm" value="Sửa danh mục">

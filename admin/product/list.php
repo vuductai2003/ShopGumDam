@@ -38,7 +38,7 @@
                                         <tr>
                                             <td>'.$id_sp.'</td>
                                             <td>'.$name.'</td>
-                                            <td>'.$price.'</td>
+                                            <td>'.number_format($price).'đ</td>
                                             <td>'.$img.'</td>
                                             <td>'.$name_dm.'</td>
                                             <td >'.mb_substr($mota,0,100,'UTF-8').'...</td>
